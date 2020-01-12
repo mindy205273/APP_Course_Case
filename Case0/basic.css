@@ -1,0 +1,98 @@
+:root{
+	--back_color: white;
+	--heartbeat:0.8s;
+}
+body {
+	margin: 0;
+    text-align: center;
+} 
+
+
+header {
+    background-color: #666;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+
+
+
+
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+section {
+	padding :5px; 
+} 
+
+#grid_1{
+	animation-name: ani_grid_1;
+    animation-duration: 8s	;
+	animation-iteration-count : infinite;
+}
+/* Standard syntax */
+@keyframes ani_grid_1 {
+	0%   {background-color: red;}
+	25%  {background-color: yellow;}
+	50%  {background-color: green;}
+	75%	 {background-color: yellow;}
+	100% {background-color: red;}
+}
+
+#grid_2{
+	animation-name: ani_grid_2;
+    animation-duration: 4s	;
+	animation-iteration-count : infinite;
+	position: relative;
+}
+
+@keyframes ani_grid_2 {
+	0%   {background-color: dodgerblue; top:0px;}
+	50%  {background-color: mediumspringgreen;top:200px;}
+	100% {background-color: dodgerblue;top:0px;}
+}
+
+#grid_3{
+	animation-name: ani_grid_3;
+	animation-duration: 4s	;
+	animation-iteration-count : infinite;
+	position: relative;
+}
+
+@keyframes ani_grid_3 {
+	0%   {background-color: #00FFFF;transform:rotate(0deg);}
+	50%  {background-color: #77FF00;transform:rotate(180deg);}
+	100% {background-color: #00FFFF;transform:rotate(360deg);}
+}
+
+#grid_4{
+	animation-name: ani_grid_4;
+	transition: width 2s, height 2s, transform 2s;
+	background-color: violet;
+	position: relative;
+}
+
+#grid_4:hover{
+	background-color: var(--back_color); 
+	width: 100px;
+	height: 100px;
+	transform: rotate(180deg);
+}
+
+
+
+#heart{
+	animation-name:heartbeat;
+	animation-duration:var(--heartbeat);
+	animation-iteration-count: infinite;
+}
+
+@keyframes heartbeat{
+	from {transform: scale(1,1); color:white;}
+	to {transform: scale(1.2,1.2) ;color:red;}
+	
+}

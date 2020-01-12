@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" manifest="lanW.appcache">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="basic.css">
+<!--use media query -->
+<link rel="stylesheet" media="(max-width: 480px)" href="style.css">
+<link rel="stylesheet" media="(min-width: 841px)" href="style_3.css">
+<link rel="stylesheet" media="(max-width: 840px) and (min-width: 481px)" href="style_2.css">
+<script src="control.js"></script>
+
+<!--font awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+
+<header>
+  <h2>RWD Control</h2>
+</header>
+
+<section>
+	<div class=container> 
+		<div class=grid id="grid_1">Grid_1</div>
+		<div class=grid id="grid_2">Grid_2</div>
+		<div class=grid id="grid_3">Grid_3</div>	
+		<div class=grid id="grid_4">Grid_4</div>
+	</div>
+	<label>choose new color to change grid_4 hover color</label>
+	<input type="color" id="mycolor" onchange="getColor();">
+</section>
+
+<footer>
+  <p>APP HW EX1</p>
+  <i class="fas fa-heart fa-3x" onclick="javascript:beat();" id="heart"></i>
+</footer>
+
+</body>
+</html>
